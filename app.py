@@ -53,8 +53,8 @@ period = c2.selectbox("Return period", months, index=months.index("Sep 2026") if
 source = c3.radio("Data source", ["Demo data", "Upload files"], horizontal=True)
 
 if source == "Demo data":
-    books = pd.read_csv(HERE / "sample_data" / "purchase_register.csv")
-    g2b = pd.read_csv(HERE / "sample_data" / "gstr2b.csv")
+    books = pd.read_csv(HERE / "purchase_register.csv")
+    g2b = pd.read_csv(HERE / "gstr2b.csv")
 else:
     u1, u2 = st.columns(2)
     fb = u1.file_uploader("Purchase register (CSV or Excel)", type=["csv", "xlsx"])
